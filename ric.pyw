@@ -6,4 +6,4 @@ root = tk.Tk()
 root.withdraw()
 
 # Show the message box
-messagebox.showinfo("Title", "Your message goes here")
+messagebox.showinfo("Title", "Are you ready to get rickrolled?")
