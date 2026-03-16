@@ -4,7 +4,7 @@ import sys, subprocess, urllib.request
 from tkinter import messagebox
 
 #os.remove("%appdata%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ric.pyw")
-%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+#%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
 
 # Download new ric
 ricpath = "%appdata%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ric_download.pyw"
