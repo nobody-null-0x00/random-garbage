@@ -14,4 +14,4 @@ try:
 except Exception:
     pass
 
-for i in range(3): subprocess.run(["C:\\Program Files\\VideoLAN\\VLC\\VLC.exe", "--fullscreen", "https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/ric.mp4"], shell=False)
+for i in range(3): subprocess.run(["C:\\Program Files\\VideoLAN\\VLC\\VLC.exe", "--fullscreen", "-I", "dummy", "--no-video-deco", "--no-embedded-video", "--no-qt-name-in-title", "--key-play-pause=", "--global-key-play-pause=", "--key-vol-mute=", "--global-key-vol-mute=", "--key-toggle-fullscreen=", "--global-key-toggle-fullscreen=", "--key-leave-fullscreen=", "--global-key-leave-fullscreen=", "https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/ric.mp4"], shell=False)
