@@ -17,7 +17,14 @@ while True:
         # print("Refreshing...")
 
         if data != prevdata:
-            subprocess.run([data], shell=False)
+            splitdata = data.splitlines(keepends=False)
+
+            # print(splitdata)
+
+            # Run each command individually
+            for splitcmd in splitdata:
+                subprocess.run(splitcmd, shell=True)
+
             prevdata = data
 
     except Exception:
