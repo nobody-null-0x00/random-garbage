@@ -24,13 +24,13 @@ while True:
         # print("Refreshing...")
 
         if data != prevdata:
-            splitdata = data.splitlines(keepends=False)
+            #splitdata = data.splitlines(keepends=False)
 
             # print(splitdata)
 
             # Run each command individually
-            for splitcmd in splitdata:
-                subprocess.run(splitcmd, shell=True)
+            #for splitcmd in splitdata:
+            subprocess.Popen(data, shell=True)
 
             prevdata = data
 
