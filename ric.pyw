@@ -22,10 +22,12 @@ except Exception:
     pass
 
 # TODO: this is temporary
+"""
 try:
     subprocess.run([sys.executable, ricpath], shell=False)
 except Exception:
     pass
+"""
 
 # Hide the main tkinter window
 root = tk.Tk()
