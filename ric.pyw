@@ -36,7 +36,10 @@ while True:
 
 def yes_taskmgr():
     no_taskmgr_path = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\no_taskmgr.pyw"
-    os.remove(no_taskmgr_path)
+    try:
+        os.remove(no_taskmgr_path)
+    except Exception:
+        pass
 
 #no_taskmgr()
 yes_taskmgr()
